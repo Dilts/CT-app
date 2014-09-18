@@ -75,12 +75,12 @@
           <input type="text" ng-model="desc" placeholder="Enter Description">
         </div>
       </div>
+        <button class="btn btn-success" ng-disabled="error || incomplete" type="submit">
+          <span class="glyphicon glyphicon-save"></span>Save Changes</button>
     </form>
 
     <hr>
-    <button class="btn btn-success" ng-disabled="error || incomplete" type="submit">
-      <span class="glyphicon glyphicon-save"></span> Save Changes
-    </button>
+
   </div>
 
   <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
