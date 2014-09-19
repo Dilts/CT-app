@@ -13,9 +13,8 @@ var uploadSchema = mongoose.Schema({
 });
 
 
-
 // Our user model
-var Upload = mongoose.model('Upload', uploadSchema);
+var Upload = mongoose.model('users', uploadSchema);
 
 // Make user model available through exports/require
-module.exports = Upload;
+module.exports.Upload = Upload;

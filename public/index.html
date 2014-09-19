@@ -26,7 +26,7 @@
         <th>Description</th>
       </tr></thead>
       <tbody>
-        <tr ng-repeat="user in users">
+        <tr ng-init="" ng-repeat="user in users">
           <td>
             <button class="btn" ng-click="editUser(user.id)">
             <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
@@ -50,7 +50,7 @@
     <h3 ng-show="edit">Upload new video:</h3>
     <h3 ng-hide="edit">Edit upload:</h3>
 
-    <form class="form-horizontal", action="/file-upload", method='post', enctype="multipart/form-data", role="form">
+    <form class="form-horizontal", role="form">
       <div class="form-group">
         <label class="col-sm-2 control-label">Name:</label>
         <div class="col-sm-10">
@@ -75,7 +75,8 @@
           <input type="text" ng-model="desc" placeholder="Enter Description">
         </div>
       </div>
-        <button class="btn btn-success" ng-disabled="error || incomplete" type="submit">
+          <button class="btn" ng-click="saveChanges(user.id)">
+        <!-- <button class="btn btn-success" ng-disabled="error || incomplete" type="submit"> -->
           <span class="glyphicon glyphicon-save"></span>Save Changes</button>
     </form>
 
